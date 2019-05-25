@@ -52,6 +52,11 @@ public class App {
         for (String el: stringList){
             System.out.println(el);
         }                                               */
-        Zadanie.zad1();
+
+     //String s = "napis";
+     //Zadanie.zad1(s);
+
+     List<Integer> list = new ArrayList<>();
+     list.add(222);
     }
 }
