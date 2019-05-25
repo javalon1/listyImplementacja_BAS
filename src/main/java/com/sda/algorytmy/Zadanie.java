@@ -14,27 +14,23 @@ public class Zadanie {
 
     public static void zad1(){
 
-        List<String> listaImion = new ArrayList<>();
+        List<String> list = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
 
-        String a;
+        while(true) {
 
-        do {
+            String linia = scanner.nextLine();
 
-            System.out.println("Podaj imię");
+            if (linia.equals("-")) {
+                break;
+            }
+            list.add(linia);
+        }
+                System.out.println("LISTA IMION");
+        for (String el: list){
 
-            a = scanner.nextLine();
-
-            listaImion.add(a);
-
-        }while (!a.equals("-"));
-
-        listaImion.remove("-");
-
-        for(String el:listaImion){
-
-            System.out.println(el);
+            System.out.println("IMIĘ:" + el);
        }
     }
 }
