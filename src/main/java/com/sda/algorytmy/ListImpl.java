@@ -1,5 +1,7 @@
 package com.sda.algorytmy;
 
+import java.util.Arrays;
+
 public class ListImpl<E> implements MyList<E> {
 
     private int size = 0;
@@ -10,6 +12,12 @@ public class ListImpl<E> implements MyList<E> {
         elementData = new Object[DEFAULT_CAPACITY];
     }
 
+
+    public void ensureCapacity(){
+        int newSize = this.DEFAULT_CAPACITY * 2;
+        elementData = Arrays.copyOf(elementData, newSize);
+    }
+
     @Override
     public int size() {
         return 0;
@@ -17,6 +25,9 @@ public class ListImpl<E> implements MyList<E> {
 
     @Override                   //dodawanie
     public boolean add(E e) {
+        if(size == DEFAULT_CAPACITY){
+            ensureCapacity();
+        }
         elementData[size++] = e;
         return false;
 
