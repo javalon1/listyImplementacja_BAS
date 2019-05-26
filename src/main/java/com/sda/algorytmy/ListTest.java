@@ -17,9 +17,16 @@ public class ListTest {
         list.add(101010);
         list.add(111111);
         list.add(121212);
+        list.add(131313);
+        list.add(141414);
         list.remove(2);
 
+        MyList<Integer> list1 = new LinkedListImpl<>();
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
 
+        System.out.println(list1);
 
     }
 }
