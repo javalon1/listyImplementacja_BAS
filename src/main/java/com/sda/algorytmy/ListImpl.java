@@ -28,6 +28,7 @@ public class ListImpl<E> implements MyList<E> {
         if(size == DEFAULT_CAPACITY){
             ensureCapacity();
         }
+
         elementData[size++] = e;
         return false;
 

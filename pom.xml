@@ -49,6 +49,14 @@
           <version>2.22.1</version>
         </plugin>
         <plugin>
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <mainClass>com.sda.algorytmy.ListTest</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
